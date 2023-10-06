@@ -6,6 +6,7 @@ const Sidebar = () => {
     <div className="bg-stone-900 flex justify-center large-sidebar-div">
       <div className="pl-4 py-12 justify-center hidden lg:flex ">
         <Image
+          alt={"alt"}
           src={"/tobias_icon.jpg"}
           width={100}
           height={100}
@@ -18,6 +19,7 @@ const Sidebar = () => {
             <span className="sidebar-span">
               <div className="p-1">
                 <Image
+                  alt={"alt"}
                   src={"/sidebarIcons/champions.svg"}
                   width={40}
                   height={40}
@@ -31,7 +33,12 @@ const Sidebar = () => {
           <a className="hover:cursor-pointer">
             <span className="sidebar-span">
               <div className="p-1">
-                <Image src={"/sidebarIcons/tasks.svg"} width={40} height={40} />
+                <Image
+                  alt={"alt"}
+                  src={"/sidebarIcons/tasks.svg"}
+                  width={40}
+                  height={40}
+                />
               </div>
               <span className="sidebar-button-text">Metas</span>
             </span>
@@ -42,6 +49,7 @@ const Sidebar = () => {
             <span className="sidebar-span">
               <div className="p-1">
                 <Image
+                  alt={"alt"}
                   src={"/sidebarIcons/achievments.svg"}
                   width={40}
                   height={40}
@@ -56,6 +64,7 @@ const Sidebar = () => {
             <span className="sidebar-span">
               <div className="p-1">
                 <Image
+                  alt={"alt"}
                   src={"/sidebarIcons/quests.svg"}
                   width={40}
                   height={40}
@@ -70,6 +79,7 @@ const Sidebar = () => {
             <span className="sidebar-span">
               <div className="p-1">
                 <Image
+                  alt={"alt"}
                   src={"/sidebarIcons/market.svg"}
                   width={40}
                   height={40}
@@ -84,6 +94,7 @@ const Sidebar = () => {
             <span className="sidebar-span">
               <div>
                 <Image
+                  alt={"alt"}
                   src={"/sidebarIcons/config.svg"}
                   width={40}
                   height={40}
