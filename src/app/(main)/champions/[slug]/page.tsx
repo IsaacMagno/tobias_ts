@@ -26,8 +26,8 @@ const ShowProfile = () => {
   }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row rounded-md">
-      <div className="flex flex-col">
+    <div className="flex flex-col lg:flex-row h-full rounded-md bg-red-300">
+      <div className="flex flex-col bg-blue-300">
         <div className="flex flex-row justify-between gap-2">
           <div className="flex-1 flex-col">
             <div className="flex flex-row justify-between">
@@ -80,10 +80,122 @@ const ShowProfile = () => {
         </div> */}
       </div>
 
-      <section className="w-full lg:w-[calc(50vw)]">
-        <div className="bg-pink-500">Stats</div>
-        <div className="bg-yellow-500">Activities</div>
+      <section className="w-full h-full mt-2 lg:mt-0 bg-green-300 p-2">
+        <h1 className="text-2xl text-center font-semibold my-4">
+          Caracteristica
+        </h1>
+
+        <ul className="list-none space-y-2">
+          <li>
+            <span className="flex justify-between">
+              <p className="text-md font-semibold">Força</p>
+              <p className="text-md font-bold">9999</p>
+            </span>
+          </li>
+          <li>
+            <span className="flex justify-between">
+              <p className="text-md font-semibold">Agilidade</p>
+              <p className="text-md font-bold">9999</p>
+            </span>
+          </li>
+          <li>
+            <span className="flex justify-between">
+              <p className="text-md font-semibold">Inteligencia</p>
+              <p className="text-md font-bold">9999</p>
+            </span>
+          </li>
+          <li>
+            <span className="flex justify-between">
+              <p className="text-md font-semibold">Vitalidade</p>
+              <p className="text-md font-bold">9999</p>
+            </span>
+          </li>
+          <li>
+            <span className="flex justify-between">
+              <p className="text-md font-semibold">Sabedoria</p>
+              <p className="text-md font-bold">9999</p>
+            </span>
+          </li>
+        </ul>
+
+        <h1 className="text-2xl text-center font-semibold my-4">Atividades</h1>
+
+        <ul className="list-none space-y-2">
+          <li>
+            <span className="flex justify-between">
+              <p className="text-md font-semibold">KM Corridos</p>
+              <p className="text-md font-bold">9999</p>
+            </span>
+          </li>
+          <li>
+            <span className="flex justify-between">
+              <p className="text-md font-semibold">Saltos de Corda</p>
+              <p className="text-md font-bold">9999</p>
+            </span>
+          </li>
+          <li>
+            <span className="flex justify-between">
+              <p className="text-md font-semibold">KM Pedalados</p>
+              <p className="text-md font-bold">9999</p>
+            </span>
+          </li>
+          <li>
+            <span className="flex justify-between">
+              <p className="text-md font-semibold">Treino Superior</p>
+              <p className="text-md font-bold">9999</p>
+            </span>
+          </li>
+          <li>
+            <span className="flex justify-between">
+              <p className="text-md font-semibold">Treino Abdominal</p>
+              <p className="text-md font-bold">9999</p>
+            </span>
+          </li>
+          <li>
+            <span className="flex justify-between">
+              <p className="text-md font-semibold">Treino Inferior</p>
+              <p className="text-md font-bold">9999</p>
+            </span>
+          </li>
+          <li>
+            <span className="flex justify-between">
+              <p className="text-md font-semibold">Refeições Saudáveis</p>
+              <p className="text-md font-bold">9999</p>
+            </span>
+          </li>
+          <li>
+            <span className="flex justify-between">
+              <p className="text-md font-semibold">Litros de Água</p>
+              <p className="text-md font-bold">9999</p>
+            </span>
+          </li>
+          <li>
+            <span className="flex justify-between">
+              <p className="text-md font-semibold">Horas de Sono</p>
+              <p className="text-md font-bold">9999</p>
+            </span>
+          </li>
+          <li>
+            <span className="flex justify-between">
+              <p className="text-md font-semibold">Horas Estudando</p>
+              <p className="text-md font-bold">9999</p>
+            </span>
+          </li>
+          <li>
+            <span className="flex justify-between">
+              <p className="text-md font-semibold">Horas Meditando</p>
+              <p className="text-md font-bold">9999</p>
+            </span>
+          </li>
+          <li>
+            <span className="flex justify-between">
+              <p className="text-md font-semibold">Horas Lendo</p>
+              <p className="text-md font-bold">9999</p>
+            </span>
+          </li>
+        </ul>
       </section>
+
       {/* <div className="hidden lg:flex flex-col bg-orange-500 grow min-w-max max-w-lg ">
           <div className="bg-pink-500 flex grow">Stats</div>
           <div className="bg-yellow-500  grow-2">Activities</div>
