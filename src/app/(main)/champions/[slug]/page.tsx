@@ -26,8 +26,8 @@ const ShowProfile = () => {
   }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row h-full rounded-md bg-red-300">
-      <div className="flex flex-col bg-blue-300">
+    <div className="flex flex-col lg:flex-row h-full rounded-md bg-red-500">
+      <div className="flex flex-col bg-blue-500">
         <div className="flex flex-row justify-between gap-2">
           <div className="flex-1 flex-col">
             <div className="flex flex-row justify-between">
@@ -80,8 +80,8 @@ const ShowProfile = () => {
         </div> */}
       </div>
 
-      <section className="w-full h-full mt-2 lg:mt-0 bg-green-300 p-2">
-        <h1 className="text-2xl text-center font-semibold my-4">
+      <section className="w-full h-full mt-2 lg:mt-0 bg-green-500 p-2">
+        <h1 className="text-xl text-center font-semibold my-4">
           Caracteristica
         </h1>
 
