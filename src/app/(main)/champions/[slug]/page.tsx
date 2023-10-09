@@ -1,17 +1,93 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import UserContent from "@/components/UserContent";
+import Image from "next/image";
+import MonkeyImage from "/public/tobs.jpeg";
 
 const ShowProfile = () => {
-  return (
-    <div className="bg-stone-900 min-h-screen grow">
-      <div className="lg:pb-6 flex gap-6 min-h-screen justify-center">
-        <UserContent />
+  const [windowSize, setWindowSize] = useState({
+    width: 0,
+    height: 0,
+  });
 
-        <div className="hidden lg:flex flex-col bg-orange-500 grow min-w-max max-w-lg ">
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return (
+    <div className="flex flex-col lg:flex-row rounded-md">
+      <div className="flex flex-col">
+        <div className="flex flex-row justify-between gap-2">
+          <div className="flex-1 flex-col">
+            <div className="flex flex-row justify-between">
+              <div>
+                <h1 className="text-2xl font-bold">Tobias</h1>
+                <p className="text-lg font-semibold text-gray-400">
+                  Chimpanzé Sapiens
+                </p>
+              </div>
+
+              {windowSize.width <= 639 && (
+                <div className="flex justify-center items-center rounded-full bg-zinc-300">
+                  <Image
+                    className="w-14 h-14 rounded-full"
+                    alt={"Monkey Image"}
+                    src={MonkeyImage}
+                  />
+                </div>
+              )}
+            </div>
+            <div className="flex mt-2">
+              <span className="text-md">
+                Se alguém é capaz de me convencer e me evidenciar que o que
+                penso ou faço não é correto, será com contentamento que me
+                corrigirei; afinal, procuro a verdade, a qual jamais causou
+                danos a alguém. Aquele, porém, que persevera no engano e na
+                ignorância causa danos a si mesmo.
+              </span>
+            </div>
+          </div>
+
+          {windowSize.width >= 640 && (
+            <div className="flex justify-center items-center w-48 h-48 rounded-full bg-zinc-300">
+              <Image
+                className="w-48 h-48 rounded-full"
+                alt={"Monkey Image"}
+                src={MonkeyImage}
+              />
+            </div>
+          )}
+        </div>
+        {/* <div className="flex">
+          <span className="text-md font-medium">
+            Se alguém é capaz de me convencer e me evidenciar que o que penso ou
+            faço não é correto, será com contentamento que me corrigirei;
+            afinal, procuro a verdade, a qual jamais causou danos a alguém.
+            Aquele, porém, que persevera no engano e na ignorância causa danos a
+            si mesmo.
+          </span>
+        </div> */}
+      </div>
+
+      <section className="w-full lg:w-[calc(50vw)]">
+        <div className="bg-pink-500">Stats</div>
+        <div className="bg-yellow-500">Activities</div>
+      </section>
+      {/* <div className="hidden lg:flex flex-col bg-orange-500 grow min-w-max max-w-lg ">
           <div className="bg-pink-500 flex grow">Stats</div>
           <div className="bg-yellow-500  grow-2">Activities</div>
-        </div>
-      </div>
+        </div> */}
     </div>
   );
 };
