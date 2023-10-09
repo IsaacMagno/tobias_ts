@@ -7,36 +7,36 @@ import levelImage from "/public/userstreak/level.svg";
 
 const UserContent = () => {
   return (
-    <div className="flex flex-col grow lg:pt-6 max-w-5xl gap-3">
-      <div className="flex justify-center items-center bg-blue-500 gap-2 border-b-2 py-2">
-        <div className="container  flex flex-col gap-3 p-3">
+    <div className="flex flex-col grow max-w-5xl gap-3">
+      <div className="flex flex-col justify-center items-center bg-blue-500 gap-2 border-b-2 py-2">
+        <div className="flex justify-between bg-red-500 min-w-full gap-3 p-3">
           <div>
             <h1 className="text-2xl font-bold">Tobias</h1>
             <p className="font-semibold opacity-80">Chimpanzé Sapiens</p>
           </div>
-          <div className="flex flex-wrap">
-            <span className="text-md font-medium container">
-              Se alguém é capaz de me convencer e me evidenciar que o que penso
-              ou faço não é correto, será com contentamento que me corrigirei;
-              afinal, procuro a verdade, a qual jamais causou danos a alguém.
-              Aquele, porém, que persevera no engano e na ignorância causa danos
-              a si mesmo.
-            </span>
+          <div className="lg:p-1 flex justify-center items-center ">
+            <Image
+              className="w-auto max-w-[3.87rem] rounded-full border-2"
+              alt={"teste"}
+              src={tobImage}
+            />
           </div>
         </div>
-        <div className="lg:p-1 container  flex justify-center items-center ">
-          <Image
-            className="w-auto max-w-[20vh] rounded-full border-2"
-            alt={"teste"}
-            src={tobImage}
-          />
+        <div className="flex flex-wrap">
+          <span className="text-md font-medium  ">
+            Se alguém é capaz de me convencer e me evidenciar que o que penso ou
+            faço não é correto, será com contentamento que me corrigirei;
+            afinal, procuro a verdade, a qual jamais causou danos a alguém.
+            Aquele, porém, que persevera no engano e na ignorância causa danos a
+            si mesmo.
+          </span>
         </div>
       </div>
       <div className="container p-3 flex flex-col lg:gap-6 ">
         <div>
           <h1 className="text-2xl font-bold pb-6">Estatísticas</h1>
         </div>
-        <div className="flex flex-col lg:flex-row gap-4 items-center lg:justify-center">
+        <div className="flex flex-wrap gap-4 items-center lg:justify-center">
           <div className="userstreaks-div">
             <span className="userstreaks-span">
               <Image

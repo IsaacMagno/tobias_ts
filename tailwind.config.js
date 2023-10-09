@@ -16,6 +16,12 @@ module.exports = {
         2: "2",
         3: "3",
       },
+      gridTemplateColumns: {
+        sidebar: "30vh auto",
+      },
+      gridTemplateRows: {
+        navbar: "64px auto",
+      },
     },
   },
   plugins: [],

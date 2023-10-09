@@ -34,8 +34,10 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+/* USERSTREAK STYLES */
+
 .userstreaks-div {
-  @apply bg-white rounded-lg min-w-fit px-5;
+  @apply bg-white rounded-lg min-w-fit p-1;
 }
 
 .userstreaks-span {
@@ -50,14 +52,16 @@ body {
   @apply text-black w-32 py-2;
 }
 
+/* SIDEBAR STYLES */
+
 .sidebar-span {
   @apply flex items-center flex-row px-1 py-2 hover:bg-stone-700 hover:bg-opacity-80 rounded-xl;
 }
 
 .sidebar-button-text {
-  @apply lg:text-2xl lg:font-semibold lg:w-36 lg:ml-3 hidden lg:block;
+  @apply text-xl font-semibold w-36 ml-3;
 }
 
 .large-sidebar-div {
-  @apply lg:px-6 lg:pr-8 lg:border-r-2 lg:flex-col lg:min-h-screen lg:gap-12 lg:justify-normal;
+  @apply lg:px-6 lg:pr-8 lg:border-r-2 lg:flex-col lg:min-h-screen lg:min-w-0 lg:gap-12 lg:justify-normal;
 }
