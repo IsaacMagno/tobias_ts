@@ -6,7 +6,7 @@ import userActivitiesImage from "/public/userStats/activities.svg";
 
 const userStats = () => {
   return (
-    <section className="w-full h-full mt-4 lg:mt-0 max-w-xs p-2">
+    <section className="w-full h-full mt-4 lg:mt-0 max-w-xs p-2 lg:border-l-2 lg:px-4">
       <div className="flex items-center justify-center gap-2  ">
         <Image src={userStatsImage} alt="user stats" className="w-10 h-10" />
 

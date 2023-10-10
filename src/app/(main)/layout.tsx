@@ -41,7 +41,7 @@ function LoginLayout({ children }: { children: ReactNode }) {
 
       {(windowSize.width >= 1023 ||
         (windowSize.width <= 1024 && isSidebarOpen)) && (
-        <aside className="fixed inset-y-0 z-10 flex-shrink-0 w-64 bg-zinc-950 lg:static focus:outline-none p-2 space-y-2">
+        <aside className="fixed inset-y-0 z-10 flex-shrink-0 w-64 bg-zinc-900 lg:static focus:outline-none p-2 space-y-2 border-r-2">
           <div className="w-full flex flex-col justify-center items-center my-6">
             <button
               onClick={() => {
