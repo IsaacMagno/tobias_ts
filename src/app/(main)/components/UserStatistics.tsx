@@ -11,7 +11,7 @@ const UserStatistics = () => {
       <div>
         <h1 className="text-2xl font-bold ">Estatísticas</h1>
       </div>
-      <div className="flex flex-wrap gap-2 items-center  p-1">
+      <div className="flex flex-wrap gap-2 items-center">
         <div className="userstreaks-div">
           <span className="userstreaks-span">
             <Image

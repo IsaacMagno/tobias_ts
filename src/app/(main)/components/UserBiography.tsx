@@ -45,7 +45,7 @@ const UserBiography = () => {
             </div>
           )}
         </div>
-        <div className="flex mt-2">
+        <div className="flex mt-2 max-w-xl lg:max-w-2xl ">
           <span className="text-sm">
             Se alguém é capaz de me convencer e me evidenciar que o que penso ou
             faço não é correto, será com contentamento que me corrigirei;
