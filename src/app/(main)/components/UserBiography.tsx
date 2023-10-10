@@ -25,7 +25,7 @@ const UserBiography = () => {
   }, []);
 
   return (
-    <div className="flex flex-row justify-between gap-2 lg:border-b-2">
+    <div className="flex flex-row justify-between gap-2 pb-3 border-b-2">
       <div className="flex-1 flex-col">
         <div className="flex flex-row justify-between">
           <div>

@@ -37,7 +37,7 @@ body {
 /* USERSTREAK STYLES */
 
 .userstreaks-div {
-  @apply bg-white rounded-lg min-w-fit p-1;
+  @apply bg-white rounded-lg p-1 min-w-fit;
 }
 
 .userstreaks-span {
@@ -45,11 +45,11 @@ body {
 }
 
 .userstreaks-img {
-  @apply w-12 mr-3 lg:w-16 lg:mr-6;
+  @apply w-10 mr-3 lg:w-10;
 }
 
 .userstreak-text-div {
-  @apply text-black w-32 py-2;
+  @apply text-black  w-24 lg:w-28;
 }
 
 /* SIDEBAR STYLES */

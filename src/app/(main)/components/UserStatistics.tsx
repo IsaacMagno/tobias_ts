@@ -7,11 +7,11 @@ import levelImage from "/public/userstreak/level.svg";
 
 const UserStatistics = () => {
   return (
-    <div className="container p-3 flex flex-col lg:gap-6 ">
+    <div className="flex flex-col gap-3">
       <div>
-        <h1 className="text-2xl font-bold pb-6">Estatísticas</h1>
+        <h1 className="text-2xl font-bold ">Estatísticas</h1>
       </div>
-      <div className="flex flex-wrap gap-4 items-center lg:justify-center">
+      <div className="flex flex-wrap gap-2 items-center  p-1">
         <div className="userstreaks-div">
           <span className="userstreaks-span">
             <Image
@@ -20,8 +20,10 @@ const UserStatistics = () => {
               src={daystreakImage}
             />
             <div className="userstreak-text-div">
-              <p className="font-extrabold lg:text-xl ">999999</p>
-              <p className="font-bold opacity-80">Dias seguidos</p>
+              <p className="font-extrabold text-sm lg:text-lg">999999</p>
+              <p className="font-bold opacity-80 text-xs lg:text-sm">
+                Dias seguidos
+              </p>
             </div>
           </span>
         </div>
@@ -29,8 +31,10 @@ const UserStatistics = () => {
           <span className="userstreaks-span">
             <Image className="userstreaks-img" alt={"teste"} src={xpImage} />
             <div className="userstreak-text-div">
-              <p className="font-extrabold lg:text-xl">999999</p>
-              <p className="font-bold opacity-80">Total de XP</p>
+              <p className="font-extrabold text-sm lg:text-lg">999999</p>
+              <p className="font-bold opacity-80 text-xs lg:text-sm">
+                Total de XP
+              </p>
             </div>
           </span>
         </div>
@@ -38,8 +42,21 @@ const UserStatistics = () => {
           <span className="userstreaks-span">
             <Image className="userstreaks-img" alt={"teste"} src={levelImage} />
             <div className="userstreak-text-div">
-              <p className="font-extrabold lg:text-xl">999999</p>
-              <p className="font-bold opacity-80">Nivel alcançado</p>
+              <p className="font-extrabold text-sm lg:text-lg">999999</p>
+              <p className="font-bold opacity-80 text-xs lg:text-sm">
+                Nivel alcançado
+              </p>
+            </div>
+          </span>
+        </div>
+        <div className="userstreaks-div">
+          <span className="userstreaks-span">
+            <Image className="userstreaks-img" alt={"teste"} src={levelImage} />
+            <div className="userstreak-text-div">
+              <p className="font-extrabold text-sm lg:text-lg">999999</p>
+              <p className="font-bold opacity-80 text-xs lg:text-sm">
+                Nivel alcançado
+              </p>
             </div>
           </span>
         </div>
