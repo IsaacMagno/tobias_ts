@@ -28,7 +28,7 @@ function LoginLayout({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row h-screen antialiased text-white bg-zinc-900">
+    <div className="flex flex-col lg:flex-row min-h-screen antialiased text-white bg-zinc-900">
       {isSidebarOpen && (
         <div
           className="fixed inset-0 z-10 bg-zinc-950 opacity-70 lg:hidden "
@@ -48,9 +48,9 @@ function LoginLayout({ children }: { children: ReactNode }) {
                 console.log("click logo");
               }}
             >
-              <span className="w-48 h-48 bg-zinc-300 flex justify-center items-center rounded-full">
+              <span className=" w-[9.5rem] h-[9.5rem] bg-white flex justify-center items-center rounded-full">
                 <Image
-                  className="w-[calc(192px-4px)] h-[calc(192px-4px)] rounded-full"
+                  className="w-[calc(150px-4px)] h-[calc(150px-4px)] rounded-full"
                   alt={"Tobias Logo"}
                   src={Logo}
                 />
@@ -153,9 +153,19 @@ function LoginLayout({ children }: { children: ReactNode }) {
         </aside>
       )}
 
-      <div className="flex justify-end py-6 px-2 items-center space-x-4 h-12 w-full lg:hidden bg-zinc-800">
+      <div className="flex justify-between py-6 px-2 items-center space-x-4 h-12 w-full lg:hidden bg-zinc-800">
+        {!isSidebarOpen ? (
+          <span className=" w-[3rem] h-[3rem]  flex justify-center items-center rounded-full">
+            <Image
+              className="w-[calc(40px-4px)] h-[calc(40px-4px)] rounded-full border-2"
+              alt={"Tobias Logo"}
+              src={Logo}
+            />
+          </span>
+        ) : null}
+
         <button
-          className="p-1 text-indigo-400 transition-colors duration-200 rounded-md bg-zinc-950 hover:text-indigo-600 hover:bg-indigo-100"
+          className="p-1 text-white transition-colors duration-200 rounded-md bg-zinc-950 hover:text-white-600 hover:bg-indigo-100"
           onClick={() => {
             setIsSidebarOpen(!isSidebarOpen);
           }}
