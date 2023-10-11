@@ -3,6 +3,7 @@ import React, { useState } from "react";
 
 import UserBiography from "./components/UserBiography";
 import UserStats from "./components/UserStats";
+import Calendar from "./components/Calendar";
 
 export default function Home() {
   const [bgColor, setBgColor] = useState("bg-green-500");
@@ -32,7 +33,9 @@ export default function Home() {
           </div>
           <div className={`flex ${bgColor} h-56 w-96 rounded-lg`}></div>
         </div>
-        <div>Calendario</div>
+        <div>
+          <Calendar />
+        </div>
       </div>
       <UserStats />
     </div>
