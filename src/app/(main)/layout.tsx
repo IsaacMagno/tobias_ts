@@ -28,7 +28,7 @@ function LoginLayout({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen antialiased text-white bg-zinc-900">
+    <div className="flex flex-col lg:flex-row min-h-screen antialiased text-white bg-zinc-900 ">
       {isSidebarOpen && (
         <div
           className="fixed inset-0 z-10 bg-zinc-950 opacity-70 lg:hidden "
@@ -41,7 +41,7 @@ function LoginLayout({ children }: { children: ReactNode }) {
 
       {(windowSize.width >= 1023 ||
         (windowSize.width <= 1024 && isSidebarOpen)) && (
-        <aside className="fixed inset-y-0 z-10 flex-shrink-0 w-64 bg-zinc-900 lg:static focus:outline-none p-2 space-y-2 border-r-2">
+        <aside className="fixed inset-y-0 z-10 flex-shrink-0 w-64 focus:outline-none p-2 space-y-2 border-r-2 bg-zinc-950 lg:static">
           <div className="w-full flex flex-col justify-center items-center my-6">
             <button
               onClick={() => {
@@ -176,7 +176,7 @@ function LoginLayout({ children }: { children: ReactNode }) {
       </div>
 
       <main className="flex-1">
-        <div className="flex flex-col flex-1 h-full min-h-screen p-4 overflow-x-hidden overflow-y-auto">
+        <div className="flex flex-col flex-1 min-h-screen p-4 overflow-x-hidden overflow-y-auto ">
           {children}
         </div>
       </main>

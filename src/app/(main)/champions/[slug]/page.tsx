@@ -11,7 +11,7 @@ const ChampionPage = () => {
     <div className="flex flex-col md:flex-row rounded-md md:gap-6 justify-center items-center lg:items-start">
       <div className="flex flex-col gap-5">
         {/* USER BIOGRAPHY */}
-        <UserBiography />
+        <UserBiography displayBio={true} />
         {/* USER STATISTICS */}
         <UserStatistics />
         {/* USER ACHIEVEMENTS */}
