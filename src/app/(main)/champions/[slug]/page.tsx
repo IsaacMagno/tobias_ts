@@ -8,7 +8,7 @@ import UserAchievements from "(main)/components/UserAchievements";
 
 const ChampionPage = () => {
   return (
-    <div className="flex flex-col md:flex-row rounded-md md:gap-6 justify-center items-center lg:items-start">
+    <div className="flex flex-col md:flex-row rounded-md md:gap-6 justify-center items-center lg:items-start lg:pr-80 lg:min-h-screen lg:box-content">
       <div className="flex flex-col gap-5">
         {/* USER BIOGRAPHY */}
         <UserBiography displayBio={true} />

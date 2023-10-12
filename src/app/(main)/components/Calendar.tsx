@@ -18,7 +18,11 @@ import daydgridPlugin from "@fullcalendar/daygrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import bootstrap5Plugin from "@fullcalendar/bootstrap5";
 
-const Calendar = () => {
+interface CalendarProps {
+  show: boolean;
+}
+
+const Calendar = ({ show }: CalendarProps) => {
   const [color, selectColor] = useState("green");
   const [events, setEvents] = useState();
 
@@ -86,7 +90,7 @@ const Calendar = () => {
   //   dispatch(selectChampion(updatedChampionStats));
   // };
 
-  return (
+  return show ? (
     <div className="flex flex-col justify-center p-2">
       <div className="m-auto ">
         <button
@@ -115,7 +119,7 @@ const Calendar = () => {
         />
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default Calendar;

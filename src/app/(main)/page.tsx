@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import UserBiography from "./components/UserBiography";
 import UserStats from "./components/UserStats";
@@ -7,9 +7,14 @@ import Calendar from "./components/Calendar";
 
 export default function Home() {
   const [bgColor, setBgColor] = useState("bg-green-500");
+  const [renderCalendar, setRenderCalendar] = useState(false);
+
+  useEffect(() => {
+    setRenderCalendar(true);
+  }, []);
 
   return (
-    <div className="flex flex-col md:flex-row rounded-md md:gap-6 justify-center items-center lg:items-start">
+    <div className="flex flex-col md:flex-row rounded-md md:gap-6 justify-center items-center lg:items-start lg:pr-80 lg:min-h-screen lg:box-content">
       <div className="flex flex-col gap-3">
         <UserBiography displayBio={false} />
         <div className="flex justify-center items-center gap-4 p-3">
@@ -34,7 +39,7 @@ export default function Home() {
           <div className={`flex ${bgColor} h-56 w-96 rounded-lg`}></div>
         </div>
         <div>
-          <Calendar />
+          <Calendar show={renderCalendar} />
         </div>
       </div>
       <UserStats />

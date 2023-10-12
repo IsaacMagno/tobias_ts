@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const SelectChampionPage = () => {
@@ -17,16 +18,18 @@ const SelectChampionPage = () => {
   ];
 
   return (
-    <div className="min-h-screen grid grid-cols-12 justify-center">
+    <div className="min-h-screen grid grid-cols-12 justify-center ">
       <div className="min-h-screen grid grid-cols-4 col-span-full gap-3 p-6">
         {champions.map((champion) => (
-          <div
+          <Link
+            href="/champions/id"
             className="bg-white/40 p-2 flex justify-center items-center hover:cursor-pointer hover:backdrop-invert hover:text-black rounded-xl"
-            key={champion}
           >
-            {champion}
-            {/* <Imagem /> */}
-          </div>
+            <div key={champion}>
+              {champion}
+              {/* <Imagem /> */}
+            </div>
+          </Link>
         ))}
       </div>
     </div>
