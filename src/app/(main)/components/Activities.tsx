@@ -21,6 +21,7 @@ const Activities = () => {
         <Image
           src={ratesImage}
           className="w-5 hover:cursor-pointer hover:p-[1px]"
+          alt="rates image"
           onClick={() => setShowRate(!showRate)}
         />
       </div>

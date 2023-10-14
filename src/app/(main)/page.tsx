@@ -14,7 +14,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row rounded-md md:gap-6 justify-center items-center lg:items-start lg:pr-80 lg:min-h-screen lg:box-content">
+    <div className="flex flex-col md:flex-row  md:gap-6 justify-center lg:pr-80 lg:min-h-screen lg:box-content">
       <div className="flex flex-col gap-3">
         <UserBiography displayBio={false} />
         <div className="flex justify-center items-center gap-4 p-3">

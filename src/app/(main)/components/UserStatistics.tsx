@@ -7,11 +7,11 @@ import levelImage from "/public/userstreak/level.svg";
 
 const UserStatistics = () => {
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 ">
       <div>
         <h1 className="text-2xl font-bold ">Estatísticas</h1>
       </div>
-      <div className="flex flex-wrap gap-2 items-center">
+      <div className="flex flex-wrap gap-2 items-center justify-center sm:justify-normal">
         <div className="userstreaks-div">
           <span className="userstreaks-span">
             <Image

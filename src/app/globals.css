@@ -75,3 +75,13 @@ body {
 .input-login {
   @apply shadow appearance-none border rounded min-w-full py-2 px-3 bg-neutral-800 text-white  outline-none font-bold;
 }
+
+/* USER STATS STYLES */
+
+.userstats-lg {
+  @apply lg:px-4 lg:fixed lg:min-w-[18rem] lg:right-0 lg:top-0 lg:border-l-2;
+}
+
+.userstats-md {
+  @apply md:pb-0 md:max-w-[18rem] md:p-2 md:mt-0  md:w-[30vh];
+}

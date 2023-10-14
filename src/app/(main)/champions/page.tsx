@@ -19,7 +19,7 @@ const SelectChampionPage = () => {
 
   return (
     <div className="min-h-screen grid grid-cols-12 justify-center ">
-      <div className="min-h-screen grid grid-cols-4 col-span-full gap-3 p-6">
+      <div className="min-h-screen grid grid-cols-2 pb-14 sm:grid-cols-4 col-span-full gap-3 p-6">
         {champions.map((champion) => (
           <Link
             href="/champions/id"
