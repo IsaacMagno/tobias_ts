@@ -6,7 +6,7 @@ import Activities from "./Activities";
 
 const userStats = () => {
   return (
-    <section className="w-full h-full mt-4 pb-14 userstats-md userstats-lg bg-zinc-900">
+    <section className="w-full h-full mt-4 pb-28 userstats-md userstats-lg bg-zinc-900">
       <div className="flex items-center justify-evenly gap-2">
         <Image src={userStatsImage} alt="user stats" className="w-10 h-10" />
 

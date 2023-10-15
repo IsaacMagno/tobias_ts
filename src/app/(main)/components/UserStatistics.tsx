@@ -4,6 +4,7 @@ import Image from "next/image";
 import daystreakImage from "/public/userstreak/daystreak.svg";
 import xpImage from "/public/userstreak/xp.svg";
 import levelImage from "/public/userstreak/level.svg";
+import achievImage from "/public/userstreak/achievStatistics.svg";
 
 const UserStatistics = () => {
   return (
@@ -51,11 +52,15 @@ const UserStatistics = () => {
         </div>
         <div className="userstreaks-div">
           <span className="userstreaks-span">
-            <Image className="userstreaks-img" alt={"teste"} src={levelImage} />
+            <Image
+              className="userstreaks-img"
+              alt={"teste"}
+              src={achievImage}
+            />
             <div className="userstreak-text-div">
               <p className="font-extrabold text-sm lg:text-lg">999999</p>
               <p className="font-bold opacity-80 text-xs lg:text-sm">
-                Nivel alcançado
+                Pts de Conquista
               </p>
             </div>
           </span>

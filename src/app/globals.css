@@ -18,6 +18,22 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  .fc .fc-button-primary {
+    background-color: rgb(24 24 27);
+    border-color: white;
+    text-transform: capitalize;
+  }
+
+  .fc .fc-button-primary:hover {
+    background-color: rgb(9 9 11);
+    border-color: white;
+    text-transform: capitalize;
+  }
+  .fc .fc-toolbar-title {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,6 +41,15 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@media (max-width: 426px) {
+  :root {
+    .fc .fc-toolbar-title {
+      font-size: 1rem;
+      font-weight: bold;
+    }
   }
 }
 

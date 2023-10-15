@@ -91,7 +91,7 @@ const Calendar = ({ show }: CalendarProps) => {
   // };
 
   return show ? (
-    <div className="flex flex-col justify-center p-2">
+    <div className="flex flex-col justify-center p-2 ">
       <div className="m-auto ">
         <button
           type="button"

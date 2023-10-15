@@ -16,6 +16,37 @@ const UserBiography = ({ displayBio }: UserBiographyProps) => {
     height: 0,
   });
 
+  const displayMiniStatistics = () => {
+    return (
+      <div className="flex gap-1 ">
+        <div>
+          <span className="flex  items-center gap-0.5 ">
+            <Image
+              src={daystreakImage}
+              alt={"daystreak image"}
+              className="w-5"
+            />
+            <p className="font-bold text-sm opacity-50">999999</p>
+          </span>
+        </div>
+
+        <div>
+          <span className="flex  items-center gap-0.5 ">
+            <Image src={xpImage} alt={"xp image"} className="w-5" />
+            <p className="font-bold text-sm opacity-50">999999</p>
+          </span>
+        </div>
+
+        <div>
+          <span className="flex  items-center gap-0.5 ">
+            <Image src={levelImage} alt={"level image"} className="w-5" />
+            <p className="font-bold text-sm opacity-50">999999</p>
+          </span>
+        </div>
+      </div>
+    );
+  };
+
   useEffect(() => {
     function handleResize() {
       setWindowSize({
@@ -43,16 +74,16 @@ const UserBiography = ({ displayBio }: UserBiographyProps) => {
           </div>
 
           {windowSize.width <= 639 && (
-            <div className="flex justify-center items-center rounded-full ">
+            <div className="flex justify-center items-center ">
               <Image
-                className="w-14 h-14 rounded-full border-2"
+                className="w-20 h-20 rounded-full border-2"
                 alt={"Monkey Image"}
                 src={MonkeyImage}
               />
             </div>
           )}
         </div>
-        <div className="flex mt-2 max-w-xl lg:max-w-2xl ">
+        <div className="flex mt-4 max-w-xl lg:max-w-2xl ">
           {displayBio ? (
             <span className="text-sm">
               Se alguém é capaz de me convencer e me evidenciar que o que penso
@@ -70,6 +101,11 @@ const UserBiography = ({ displayBio }: UserBiographyProps) => {
                 minus doloribus quaerat facilis ullam.
               </p>
               <p className="text-sm">Autor</p>
+              {windowSize.width <= 639 && (
+                <div className="flex  justify-end">
+                  {displayMiniStatistics()}
+                </div>
+              )}
             </span>
           )}
         </div>
@@ -90,36 +126,7 @@ const UserBiography = ({ displayBio }: UserBiographyProps) => {
                   alt={"Monkey Image"}
                   src={MonkeyImage}
                 />
-                <div className="flex gap-1 ">
-                  <div>
-                    <span className="flex  items-center gap-0.5 ">
-                      <Image
-                        src={daystreakImage}
-                        alt={"daystreak image"}
-                        className="w-5"
-                      />
-                      <p className="font-bold text-sm opacity-50">999999</p>
-                    </span>
-                  </div>
-
-                  <div>
-                    <span className="flex  items-center gap-0.5 ">
-                      <Image src={xpImage} alt={"xp image"} className="w-5" />
-                      <p className="font-bold text-sm opacity-50">999999</p>
-                    </span>
-                  </div>
-
-                  <div>
-                    <span className="flex  items-center gap-0.5 ">
-                      <Image
-                        src={levelImage}
-                        alt={"level image"}
-                        className="w-5"
-                      />
-                      <p className="font-bold text-sm opacity-50">999999</p>
-                    </span>
-                  </div>
-                </div>
+                {displayMiniStatistics()}
               </div>
             </div>
           )}
