@@ -110,3 +110,10 @@ body {
 .userstats-md {
   @apply md:pb-0 md:max-w-[18rem] md:p-2 md:mt-0  md:w-[30vh];
 }
+
+/*  USER GOALS STYLES */
+
+.new-goal {
+  -webkit-text-stroke-width: 1px; /* largura da borda */
+  -webkit-text-stroke-color: #ffffff; /* cor da borda */
+}
