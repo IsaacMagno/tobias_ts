@@ -2,9 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import MonkeyImage from "/public/tobs.jpeg";
-import daystreakImage from "/public/userstreak/daystreak.svg";
-import xpImage from "/public/userstreak/xp.svg";
-import levelImage from "/public/userstreak/level.svg";
+import MiniStatistics from "./MiniStatistics";
 
 interface UserBiographyProps {
   displayBio: boolean;
@@ -15,37 +13,6 @@ const UserBiography = ({ displayBio }: UserBiographyProps) => {
     width: 0,
     height: 0,
   });
-
-  const displayMiniStatistics = () => {
-    return (
-      <div className="flex gap-1 ">
-        <div>
-          <span className="flex  items-center gap-0.5 ">
-            <Image
-              src={daystreakImage}
-              alt={"daystreak image"}
-              className="w-5"
-            />
-            <p className="font-bold text-sm opacity-50">999999</p>
-          </span>
-        </div>
-
-        <div>
-          <span className="flex  items-center gap-0.5 ">
-            <Image src={xpImage} alt={"xp image"} className="w-5" />
-            <p className="font-bold text-sm opacity-50">999999</p>
-          </span>
-        </div>
-
-        <div>
-          <span className="flex  items-center gap-0.5 ">
-            <Image src={levelImage} alt={"level image"} className="w-5" />
-            <p className="font-bold text-sm opacity-50">999999</p>
-          </span>
-        </div>
-      </div>
-    );
-  };
 
   useEffect(() => {
     function handleResize() {
@@ -103,7 +70,7 @@ const UserBiography = ({ displayBio }: UserBiographyProps) => {
               <p className="text-sm">Autor</p>
               {windowSize.width <= 639 && (
                 <div className="flex  justify-end">
-                  {displayMiniStatistics()}
+                  <MiniStatistics />
                 </div>
               )}
             </span>
@@ -126,7 +93,7 @@ const UserBiography = ({ displayBio }: UserBiographyProps) => {
                   alt={"Monkey Image"}
                   src={MonkeyImage}
                 />
-                {displayMiniStatistics()}
+                <MiniStatistics />
               </div>
             </div>
           )}
