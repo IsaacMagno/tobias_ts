@@ -53,13 +53,13 @@ const BottombarMenu = () => {
         </li>
         <li className="box-border">
           <Link
-            href="/"
+            href="/quests"
             className="flex items-center flex-row  hover:bg-zinc-400 hover:bg-opacity-80 rounded-md hover:cursor-pointer"
           >
             <div className="p-1">
               <Image
                 alt={"alt"}
-                src={"/sidebarIcons/achievments.svg"}
+                src={"/sidebarIcons/quests.svg"}
                 width={50}
                 height={50}
               />
@@ -68,13 +68,13 @@ const BottombarMenu = () => {
         </li>
         <li className="box-border">
           <Link
-            href="/quests"
+            href="/"
             className="flex items-center flex-row  hover:bg-zinc-400 hover:bg-opacity-80 rounded-md hover:cursor-pointer"
           >
             <div className="p-1">
               <Image
                 alt={"alt"}
-                src={"/sidebarIcons/quests.svg"}
+                src={"/sidebarIcons/achievments.svg"}
                 width={50}
                 height={50}
               />

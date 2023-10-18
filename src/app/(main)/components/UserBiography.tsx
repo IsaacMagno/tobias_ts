@@ -46,6 +46,7 @@ const UserBiography = ({ displayBio }: UserBiographyProps) => {
                 className="w-20 h-20 rounded-full border-2"
                 alt={"Monkey Image"}
                 src={MonkeyImage}
+                priority
               />
             </div>
           )}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 
 const SelectChampionPage = () => {
@@ -15,19 +16,34 @@ const SelectChampionPage = () => {
     "campeao10",
     "campeao11",
     "campeao12",
+    "campeao5",
+    "campeao6",
+    "campeao7",
+    "campeao8",
+    "campeao9",
+    "campeao10",
+    "campeao11",
+    "campeao12",
   ];
 
   return (
     <div className="min-h-screen grid grid-cols-12 justify-center ">
-      <div className="min-h-screen grid grid-cols-2 pb-14 sm:grid-cols-4 col-span-full gap-3 p-6">
+      <div className="min-h-screen grid grid-cols-2 pb-24  sm:grid-cols-4 col-span-full gap-3 p-6">
         {champions.map((champion) => (
           <Link
             href="/champions/id"
-            className="bg-white/40 p-2 flex justify-center items-center hover:cursor-pointer hover:backdrop-invert hover:text-black rounded-xl"
+            className=" flex justify-center items-center "
           >
-            <div key={champion}>
-              {champion}
-              {/* <Imagem /> */}
+            <div key={champion} className="">
+              <Image
+                src={`/championImages/holyTobs${Math.floor(
+                  Math.random() * 4
+                )}.jpeg`}
+                alt={champion}
+                width={300}
+                height={100}
+                className="hover:invert  hover:cursor-pointer rounded-lg"
+              />
             </div>
           </Link>
         ))}

@@ -53,22 +53,6 @@ const SidebarMenu = () => {
         </li>
         <li>
           <Link
-            href="/"
-            className="flex items-center flex-row px-1 py-2 hover:bg-stone-700 hover:bg-opacity-80 rounded-md hover:cursor-pointer"
-          >
-            <div className="p-1">
-              <Image
-                alt={"alt"}
-                src={"/sidebarIcons/achievments.svg"}
-                width={40}
-                height={40}
-              />
-            </div>
-            <span className="sidebar-button-text">Conquistas</span>
-          </Link>
-        </li>
-        <li>
-          <Link
             href="/quests"
             className="flex items-center flex-row px-1 py-2 hover:bg-stone-700 hover:bg-opacity-80 rounded-md hover:cursor-pointer"
           >
@@ -81,6 +65,22 @@ const SidebarMenu = () => {
               />
             </div>
             <span className="sidebar-button-text">Missões</span>
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/"
+            className="flex items-center flex-row px-1 py-2 hover:bg-stone-700 hover:bg-opacity-80 rounded-md hover:cursor-pointer"
+          >
+            <div className="p-1">
+              <Image
+                alt={"alt"}
+                src={"/sidebarIcons/achievments.svg"}
+                width={40}
+                height={40}
+              />
+            </div>
+            <span className="sidebar-button-text">Conquistas</span>
           </Link>
         </li>
         <li>

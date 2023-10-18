@@ -1,6 +1,6 @@
-@tailwind base;
-
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+@tailwind base;
 
 @layer base {
   html {
@@ -11,8 +11,8 @@
 @tailwind utilities;
 
 ::-webkit-scrollbar {
-  /* width: 1; */
-  /* display: none; */
+  width: 0;
+  display: none;
 }
 
 :root {
