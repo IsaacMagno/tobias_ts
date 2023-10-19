@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react";
 
 import GoalsIcon from "/public/goalsIcons/goals.svg";
 import MiniStatistics from "../components/MiniStatistics";
-import ActualGoalsScrollBar from "./ActualGoalsScrollBar";
+import ActualGoalsScrollBar from "../components/ActualGoalsScrollBar";
 
 const page = () => {
   const [goalTime, setGoalTime] = useState("Anual");
@@ -102,11 +102,11 @@ const page = () => {
           <ActualGoalsScrollBar />
         </div>
       </div>
-      <section className="w-full h-full pb-4 lg:mt-4 lg:pb-28 userstats-md userstats-lg bg-zinc-900 lg:border-l-0 mx-2">
+      <section className="w-full h-full pb-4 lg: lg:pb-28 userstats-md userstats-lg bg-zinc-900 lg:border-l-0 mx-2">
         <div className="my-4 mr-4 flex justify-center lg:block">
           <MiniStatistics />
         </div>
-        <div className="h-full flex flex-col gap-2  max-h-[25rem]  border rounded-lg p-2">
+        <div className="h-full flex flex-col gap-2  max-h-[25rem]  border rounded-lg p-2 mr-3.5 lg:mr-0">
           <span className="flex justify-between items-center ">
             <h1 className="w-1 font-extrabold">Metas Alcançadas</h1>
             <h1 className="opacity-50 font-extrabold hover:opacity-80">
