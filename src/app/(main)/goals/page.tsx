@@ -48,7 +48,7 @@ const page = () => {
                     readOnly
                   />
                   {showDropdown ? (
-                    <div className="min-w-[8.7rem] h-30 fixed bg-zinc-800 rounded-lg flex flex-col text-center gap-1 font-extrabold  border-zinc-950 ">
+                    <div className="min-w-[8.7rem] h-30 absolute bg-zinc-800 rounded-lg flex flex-col text-center gap-1 font-extrabold  border-zinc-950 ">
                       <span
                         className="hover:bg-zinc-700 hover:cursor-pointer hover:rounded-t-lg"
                         onClick={() => handleChange("Anual")}
