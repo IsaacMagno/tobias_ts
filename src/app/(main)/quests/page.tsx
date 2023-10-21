@@ -1,25 +1,19 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 
 import { AlarmClock } from "lucide-react";
 
 import MonthChallenge from "/public/questsIcon/monthChallenge.svg";
+import actualQuests from "/public/questsIcon/actualQuests.svg";
 import MiniStatistics from "../components/MiniStatistics";
 
 const page = () => {
-  const [goalTime, setGoalTime] = useState("Anual");
-  const [showDropdown, setShowDropdown] = useState(false);
-
   const goalsCompleted = [
     { name: "Correr 2km 7 dias", date: "21/09/2023" },
     { name: "Fazer 30 flexões 5 dias", date: "10/05/2023" },
     { name: "200km de bike em 30 dias", date: "03/04/2023" },
   ];
-
-  const handleChange = (goalTime: string) => {
-    setGoalTime(goalTime);
-  };
 
   return (
     <div className="flex flex-col-reverse md:flex-row  md:gap-6 justify-center lg:pr-80 lg:min-h-screen lg:box-content ">
@@ -34,55 +28,69 @@ const page = () => {
             className="lg:w-96 absolute opacity-80 ml-20 lg:ml-32 top-[-30px] lg:top-[-80px]"
           />
           <div className=" max-w-2xl  flex flex-grow flex-col shadow-md  z-10 relative">
-            <div>
-              <div className="flex flex-col lg:flex-row justify-between mb-4">
-                <span className="font-extrabold text-2xl ">Desafio do Mês</span>
-                <span className="flex items-end ">
-                  <AlarmClock
-                    className="mb-1 opacity-80"
-                    strokeWidth={3}
-                    width={30}
-                  />
-                  <p className="self-end opacity-80 font-extrabold">30 dias</p>
-                </span>
+            <div className="flex flex-col lg:flex-row justify-between mb-4">
+              <span className="font-extrabold text-2xl ">Desafio do Mês</span>
+              <span className="flex items-end ">
+                <AlarmClock
+                  className="mb-1 opacity-80"
+                  strokeWidth={3}
+                  width={30}
+                />
+                <p className="self-end opacity-80 font-extrabold">30 dias</p>
+              </span>
+            </div>
+            <div className="flex mb-16 lg:mb-24 ">
+              <span className="font-extrabold text-xl text-zinc-600 p-2 px-6 rounded-lg bg-zinc-200">
+                Outubro
+              </span>
+            </div>
+            <div className="bg-zinc-900 rounded-lg p-3 lg:p-5">
+              <div className="lg:text-xl font-extrabold mb-6">
+                <p>Corra 50 (km) quilômetros</p>
               </div>
-              <div className="flex mb-16 lg:mb-24 ">
-                <span className="font-extrabold text-xl text-zinc-600 p-2 px-6 rounded-lg bg-zinc-200">
-                  Outubro
-                </span>
-              </div>
-              <div className="">
-                <div className="bg-zinc-900 rounded-lg p-3 lg:p-5">
-                  <div className="lg:text-xl font-extrabold mb-6">
-                    <p>Corra 50 (km) quilômetros</p>
-                  </div>
-                  <div className="flex box-content">
-                    <span className="absolute w-[2rem] max-w-[31rem] bg-zinc-950 p-2 lg:py-3 rounded-lg left-[0.700rem] lg:left-[1.2rem] box-content"></span>
-                    <span className="w-full bg-zinc-200 p-2 lg:py-3 rounded-lg  max-w-[31rem] box-content"></span>
-                  </div>
-                </div>
+              <div className="flex box-content">
+                <span className="absolute w-[2rem] max-w-[31rem] bg-zinc-950 p-2 lg:py-3 rounded-lg left-[0.700rem] lg:left-[1.2rem] box-content"></span>
+                <span className="w-full bg-zinc-200 p-2 lg:py-3 rounded-lg  max-w-[31rem] box-content"></span>
               </div>
             </div>
           </div>
         </div>
-        <div className="">
-          <div className="grid grid-rows-4 bg-blue-500 rounded-lg p-2 min-w-full">
-            <div className="py-3 border-b flex items-center justify-evenly">
-              <span>Image</span>
-              <span className="">Correr 100 km por dia</span>
-            </div>
-            <div className="py-3 border-b flex items-center justify-evenly">
-              <span>Image</span>
-              <span className="">Correr 100 km por dia</span>
-            </div>
-            <div className="py-3 border-b flex items-center justify-evenly">
-              <span>Image</span>
-              <span className="">Correr 100 km por dia</span>
-            </div>
-            <div className="py-3 border-b flex items-center justify-evenly">
-              <span>Image</span>
-              <span className="">Correr 100 km por dia</span>
-            </div>
+        <div className="grid grid-rows-4  p-2 bg-zinc-800 rounded-lg min-w-full border px-6 lg:px-20">
+          <div className="flex w-full justify-center gap-4 items-center border-b">
+            <Image src={actualQuests} alt="actualQuestsIcon" className="w-16" />
+            <span className="w-full bg-zinc-200 p-2 py-3 rounded-lg max-w-[31rem] box-border relative">
+              <p className="absolute top-[0.15rem] font-bold text-sm text-zinc-300 z-30">
+                Estudar 200 horas
+              </p>
+              <span className="absolute w-[9rem] max-w-[31rem] bg-zinc-950 rounded-lg left-[-1px] top-0 p-3 box-border"></span>
+            </span>
+          </div>
+          <div className="flex w-full justify-center gap-4 items-center border-b">
+            <Image src={actualQuests} alt="actualQuestsIcon" className="w-16" />
+            <span className="w-full bg-zinc-200 p-2 py-3 rounded-lg max-w-[31rem] box-border relative">
+              <p className="absolute top-[0.15rem] font-bold text-sm text-zinc-300 z-30">
+                Estudar 200 horas
+              </p>
+              <span className="absolute w-[9rem] max-w-[31rem] bg-zinc-950 rounded-lg left-[-1px] top-0 p-3 box-border"></span>
+            </span>
+          </div>
+          <div className="flex w-full justify-center gap-4 items-center border-b">
+            <Image src={actualQuests} alt="actualQuestsIcon" className="w-16" />
+            <span className="w-full bg-zinc-200 p-2 py-3 rounded-lg max-w-[31rem] box-border relative">
+              <p className="absolute top-[0.15rem] font-bold text-sm text-zinc-300 z-30">
+                Estudar 200 horas
+              </p>
+              <span className="absolute w-[9rem] max-w-[31rem] bg-zinc-950 rounded-lg left-[-1px] top-0 p-3 box-border"></span>
+            </span>
+          </div>
+          <div className="flex w-full justify-center gap-4 items-center">
+            <Image src={actualQuests} alt="actualQuestsIcon" className="w-16" />
+            <span className="w-full bg-zinc-200 p-2 py-3 rounded-lg max-w-[31rem] box-border relative">
+              <p className="absolute top-[0.15rem] font-bold text-sm text-zinc-300 z-30">
+                Estudar 200 horas
+              </p>
+              <span className="absolute w-[9rem] max-w-[31rem] bg-zinc-950 rounded-lg left-[-1px] top-0 p-3 box-border"></span>
+            </span>
           </div>
         </div>
       </div>

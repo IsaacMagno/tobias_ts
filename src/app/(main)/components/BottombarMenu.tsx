@@ -68,7 +68,7 @@ const BottombarMenu = () => {
         </li>
         <li className="box-border">
           <Link
-            href="/"
+            href="/404"
             className="flex items-center flex-row  hover:bg-zinc-400 hover:bg-opacity-80 rounded-md hover:cursor-pointer"
           >
             <div className="p-1">
@@ -83,7 +83,7 @@ const BottombarMenu = () => {
         </li>
         <li className="box-border">
           <Link
-            href="/"
+            href="/404"
             className="flex items-center flex-row  hover:bg-zinc-400 hover:bg-opacity-80 rounded-md hover:cursor-pointer"
           >
             <div className="p-1">
@@ -98,7 +98,7 @@ const BottombarMenu = () => {
         </li>
         <li className="box-border">
           <Link
-            href="/"
+            href="/404"
             className="flex items-center flex-row  hover:bg-zinc-400 hover:bg-opacity-80 rounded-md hover:cursor-pointer"
           >
             <div className="p-1">

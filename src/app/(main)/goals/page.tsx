@@ -145,6 +145,7 @@ const page = () => {
           <ActualGoalsScrollBar />
         </div>
       </div>
+      {/* SIDE BAR */}
       <section className="w-full h-full pb-4 lg: lg:pb-28 userstats-md userstats-lg bg-zinc-900 lg:border-l-0 mx-2">
         <div className="my-4 mr-4 flex justify-center lg:block">
           <MiniStatistics />

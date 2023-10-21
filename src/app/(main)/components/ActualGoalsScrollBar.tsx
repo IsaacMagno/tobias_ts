@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { SendHorizontal, StepBack, StepForward } from "lucide-react";
+import { SendHorizontal, StepBack, StepForward, X } from "lucide-react";
 
 const ActualGoalsScrollBar = () => {
   const goalList = [
@@ -40,7 +40,14 @@ const ActualGoalsScrollBar = () => {
         >
           {goalList.map((_, i) => (
             <div className="bg-zinc-950 w-52 rounded-lg box-border" key={i}>
-              <div className=" p-6 pb-2 rounded-lg box-border">
+              <div className="flex justify-end m-1">
+                <X
+                  className="bg-white text-red-900 rounded opacity-20 hover:opacity-100 cursor-pointer"
+                  strokeWidth={3}
+                />
+              </div>
+
+              <div className=" p-6 py-2 rounded-lg box-border">
                 <span className="flex justify-between border-b">
                   <p className="font-extrabold">Objetivo</p>
                   <p className="font-bold opacity-80">Correr</p>
