@@ -1,26 +1,71 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
-
-import { ChevronDown } from "lucide-react";
 
 import GoalsIcon from "/public/goalsIcons/goals.svg";
 import MiniStatistics from "../components/MiniStatistics";
 import ActualGoalsScrollBar from "../components/ActualGoalsScrollBar";
+import Dropdown from "(main)/components/Dropdown";
 
 const page = () => {
   const [goalTime, setGoalTime] = useState("Anual");
-  const [showDropdown, setShowDropdown] = useState(false);
+  const [goalType, setGoalType] = useState("Stats");
+  const [goalVinc, setGoalVinc] = useState("Vinculo");
+  const [vincArray, setVincArray] = useState<string[]>([""]);
+
+  const [showGoalTime, setShowGoalTime] = useState(false);
+  const [showGoalType, setShowGoalType] = useState(false);
+  const [showGoalVinc, setShowGoalVinc] = useState(false);
+
+  useEffect(() => {
+    const handleChangeType = () => {
+      let newVincArray: string[] = [];
+
+      switch (goalType) {
+        case "DEX":
+          newVincArray = ["Km corridos", "Saltos de corda", "Km pedalados"];
+          setGoalVinc("Vinculo");
+
+          break;
+        case "STR":
+          newVincArray = [
+            "Treino superior",
+            "Treino abdominal",
+            "Treino inferior",
+          ];
+          setGoalVinc("Vinculo");
+          break;
+        case "INT":
+          newVincArray = ["Horas estudando", "Horas meditando", "Horas lendo"];
+          setGoalVinc("Vinculo");
+          break;
+        case "CON":
+          newVincArray = ["Horas de sono", "Litros de água", "Ref. saudáveis"];
+          setGoalVinc("Vinculo");
+          break;
+        case "Nenhum":
+          newVincArray = [];
+          setGoalVinc("Vinculo");
+          break;
+      }
+
+      setVincArray(newVincArray);
+    };
+
+    handleChangeType();
+  }, [goalType]);
+
+  const disableActiveDropdowns = () => {
+    if (showGoalVinc) setShowGoalVinc(false);
+    if (showGoalTime) setShowGoalTime(false);
+    if (showGoalType) setShowGoalType(false);
+  };
 
   const goalsCompleted = [
     { name: "Correr 120km", date: "19/10/2023" },
     { name: "Ler 5 livros", date: "22/05/2023" },
     { name: "Investir R$ 10.000,00", date: "03/04/2023" },
   ];
-
-  const handleChange = (goalTime: string) => {
-    setGoalTime(goalTime);
-  };
 
   return (
     <div className="flex flex-col-reverse md:flex-row  md:gap-6 justify-center lg:pr-80 lg:min-h-screen lg:box-content ">
@@ -37,60 +82,58 @@ const page = () => {
               <div className="flex flex-col gap-2 py-2">
                 <div
                   className=""
-                  onClick={() => setShowDropdown(!showDropdown)}
+                  onClick={() => {
+                    setShowGoalType(!showGoalType), disableActiveDropdowns();
+                  }}
                 >
-                  <div className="absolute ml-[7.20rem] lg:ml-[6.8rem] bg-zinc-800 border-2 border-black w-7 h-7 lg:w-10 lg:h-10 flex items-center justify-center rounded-full appearance-none outline-none hover:cursor-pointer">
-                    <ChevronDown className=" text-zinc-950 " />
-                  </div>
-                  <input
-                    className="w-36 rounded-full py-0.5 lg:py-1 font-extrabold text-center text-sm md:text-lg  appearance-none outline-none border-2 border-zinc-950 "
-                    placeholder={goalTime}
-                    readOnly
+                  <Dropdown
+                    show={showGoalType}
+                    optionsText={["DEX", "STR", "INT", "CON", "Nenhum"]}
+                    handleChange={setGoalType}
+                    placeholder={goalType}
                   />
-                  {showDropdown ? (
-                    <div className="min-w-[8.7rem] h-30 absolute bg-zinc-800 rounded-lg flex flex-col text-center gap-1 font-extrabold  border-zinc-950 ">
-                      <span
-                        className="hover:bg-zinc-700 hover:cursor-pointer hover:rounded-t-lg"
-                        onClick={() => handleChange("Anual")}
-                      >
-                        Anual
-                      </span>
-                      <span
-                        className="hover:bg-zinc-700 hover:cursor-pointer"
-                        onClick={() => handleChange("Mensal")}
-                      >
-                        Mensal
-                      </span>
-                      <span
-                        className="hover:bg-zinc-700 hover:cursor-pointer"
-                        onClick={() => handleChange("Semanal")}
-                      >
-                        Semanal
-                      </span>
-                      <span
-                        className="hover:bg-zinc-700 hover:cursor-pointer  hover:rounded-b-lg"
-                        onClick={() => handleChange("Diaria")}
-                      >
-                        Diaria
-                      </span>
-                    </div>
-                  ) : null}
+                </div>
+                <div
+                  className=""
+                  onClick={() => {
+                    setShowGoalVinc(!showGoalVinc), disableActiveDropdowns();
+                  }}
+                >
+                  <Dropdown
+                    show={showGoalVinc}
+                    optionsText={vincArray}
+                    handleChange={setGoalVinc}
+                    placeholder={goalVinc}
+                  />
                 </div>
                 <div>
                   <input
-                    className="w-36 rounded-full py-0.5 lg:py-1 font-extrabold text-center text-sm md:text-lg appearance-none outline-none border-2 border-zinc-950 text-zinc-800"
+                    className="w-[10rem] lg:w-[12rem] ml-2 rounded-full py-0.5 lg:py-1 font-extrabold text-center text-sm md:text-base appearance-none outline-none border-2 border-zinc-950 text-zinc-800"
                     placeholder="Objetivo"
                   />
                 </div>
                 <div>
                   <input
-                    className="w-36 rounded-full py-0.5 lg:py-1 font-extrabold text-center text-sm md:text-lg appearance-none outline-none border-2 border-zinc-950 text-zinc-800"
+                    className="w-[10rem] lg:w-[12rem] ml-2 rounded-full py-0.5 lg:py-1 font-extrabold text-center text-sm md:text-base appearance-none outline-none border-2 border-zinc-950 text-zinc-800"
                     placeholder="Meta"
+                  />
+                </div>
+                <div
+                  className=""
+                  onClick={() => {
+                    setShowGoalTime(!showGoalTime), disableActiveDropdowns();
+                  }}
+                >
+                  <Dropdown
+                    show={showGoalTime}
+                    optionsText={["Anual", "Mensal"]}
+                    handleChange={setGoalTime}
+                    placeholder={goalTime}
                   />
                 </div>
 
                 <div>
-                  <button className="w-36 rounded-full py-0.5 lg:py-1 font-extrabold text-center text-sm md:text-lg border-2 border-black bg-zinc-600 hover:bg-zinc-600/90">
+                  <button className="w-[10rem] lg:w-[12rem] ml-2 rounded-full py-0.5 lg:py-1 font-extrabold text-center text-sm md:text-base border-2 border-black bg-zinc-600 hover:bg-zinc-600/90">
                     Criar
                   </button>
                 </div>

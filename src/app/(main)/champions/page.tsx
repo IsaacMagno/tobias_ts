@@ -33,12 +33,13 @@ const SelectChampionPage = () => {
           <Link
             href="/champions/id"
             className=" flex justify-center items-center "
+            key={champion}
           >
-            <div key={champion} className="">
+            <div>
               <Image
                 src={`/championImages/holyTobs${Math.floor(
                   Math.random() * 4
-                )}.jpeg`}
+                )}.webp`}
                 alt={champion}
                 width={300}
                 height={100}

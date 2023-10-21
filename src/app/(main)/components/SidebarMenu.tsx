@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import Logo from "/public/tobias_icon.jpg";
+import Logo from "/public/tobias_icon.webp";
 import Link from "next/link";
 
 const SidebarMenu = () => {

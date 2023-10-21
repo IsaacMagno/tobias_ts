@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { Menu, X } from "lucide-react";
 
-import Logo from "/public/tobias_icon.jpg";
+import Logo from "/public/tobias_icon.webp";
 
 const BottombarMenu = () => {
   return (

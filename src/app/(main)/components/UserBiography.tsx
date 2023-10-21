@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import MonkeyImage from "/public/tobs.jpeg";
+import MonkeyImage from "/public/tobs.webp";
 import MiniStatistics from "./MiniStatistics";
 
 interface UserBiographyProps {
