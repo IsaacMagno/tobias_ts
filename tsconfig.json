@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "baseUrl": "src/app",
+    "baseUrl": ".",
     "paths": {
       // "@/styles/*": ["styles/*"],
-      "@/components/*": ["components/*"]
+      // "@/components/*": ["components/*"]
     },
     "target": "es2020",
     "esModuleInterop": true,

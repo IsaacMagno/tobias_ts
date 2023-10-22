@@ -2,9 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Menu, X } from "lucide-react";
-
-import Logo from "/public/tobias_icon.webp";
+import Logo from "/public/tobiasIcon.webp";
 
 const BottombarMenu = () => {
   return (
@@ -68,7 +66,7 @@ const BottombarMenu = () => {
         </li>
         <li className="box-border">
           <Link
-            href="/404"
+            href="/achievements"
             className="flex items-center flex-row  hover:bg-zinc-400 hover:bg-opacity-80 rounded-md hover:cursor-pointer"
           >
             <div className="p-1">
@@ -83,7 +81,7 @@ const BottombarMenu = () => {
         </li>
         <li className="box-border">
           <Link
-            href="/404"
+            href="/shop"
             className="flex items-center flex-row  hover:bg-zinc-400 hover:bg-opacity-80 rounded-md hover:cursor-pointer"
           >
             <div className="p-1">

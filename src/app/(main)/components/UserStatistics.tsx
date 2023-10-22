@@ -4,7 +4,7 @@ import Image from "next/image";
 import daystreakImage from "/public/userstreak/daystreak.svg";
 import xpImage from "/public/userstreak/xp.svg";
 import levelImage from "/public/userstreak/level.svg";
-import achievImage from "/public/userstreak/achievStatistics.svg";
+import achievImage from "/public/userstreak/achievPoints.svg";
 
 const UserStatistics = () => {
   return (
