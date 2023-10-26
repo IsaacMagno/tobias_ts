@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import SidebarMenu from "./components/SidebarMenu";
-import BottombarMenu from "./components/BottombarMenu";
+import SidebarMenu from "./components/LayoutComponents/SidebarMenu";
+import BottombarMenu from "./components/LayoutComponents/BottombarMenu";
 
 function AppLayout({ children }: { children: ReactNode }) {
   return (

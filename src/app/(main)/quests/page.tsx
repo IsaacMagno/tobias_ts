@@ -6,7 +6,7 @@ import { AlarmClock } from "lucide-react";
 
 import MonthChallenge from "/public/questsIcon/monthChallenge.svg";
 import actualQuests from "/public/questsIcon/actualQuests.svg";
-import MiniStatistics from "../components/MiniStatistics";
+import MiniStatistics from "../components/LayoutComponents/MiniStatistics";
 
 const page = () => {
   const goalsCompleted = [

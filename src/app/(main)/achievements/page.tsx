@@ -35,9 +35,9 @@ const page = () => {
   const [showAchievements, setShowAchievements] = useState(false);
 
   return (
-    <div className="grid grid-cols-4  min-h-screen bg-zinc-800 rounded-lg pb-16">
-      <div className="col-span-3 relative">
-        <div className="min-w-full absolute bg-zinc-800 px-4">
+    <div className="grid grid-cols-4  min-h-screen bg-zinc-800 rounded-lg pb-16 lg:pb-0">
+      <div className="col-span-full pt-12 lg:pt-0 lg:col-span-3 relative">
+        <div className="min-w-full fixed inset-x-0 lg:absolute bg-zinc-800 px-4">
           <div className="flex justify-center">
             <span className="font-extrabold text-2xl  p-3 flex items-center">
               <Image src={achievPoints} alt="achievPoints" className="w-10" />
@@ -48,15 +48,15 @@ const page = () => {
             {sumary === "Destreza" ? (
               <ul className="bg-zinc-950 flex justify-between text-center p-2 rounded-lg font-extrabold ">
                 <li
-                  className="flex-grow py-4 text-white/50 hover:text-white hover:bg-zinc-900 rounded-lg"
+                  className="flex-grow py-2 lg:py-4 text-sm text-white/50 hover:text-white hover:bg-zinc-900 cursor-pointer rounded-lg"
                   onClick={() => setShowAchievements(!showAchievements)}
                 >
                   Corrida
                 </li>
-                <li className="flex-grow py-4 text-white/50 hover:text-white hover:bg-zinc-900 rounded-lg">
+                <li className="flex-grow py-2 lg:py-4 text-sm text-white/50 hover:text-white hover:bg-zinc-900 cursor-pointer rounded-lg">
                   Salto de corda
                 </li>
-                <li className="flex-grow py-4 text-white/50 hover:text-white hover:bg-zinc-900 rounded-lg">
+                <li className="flex-grow py-2 lg:py-4 text-sm text-white/50 hover:text-white hover:bg-zinc-900 cursor-pointer rounded-lg">
                   Bike
                 </li>
               </ul>
@@ -65,10 +65,10 @@ const page = () => {
         </div>
         {showAchievements ? <AchievementList /> : null}
       </div>
-      <div className="text-right bg-zinc-950 rounded-r-lg p-2">
-        <ul className="flex flex-col gap-2">
+      <div className="fixed top-0 inset-x-0 col-span-full border-b lg:border-none lg:static lg:top-auto lg:inset-x-auto lg:col-span-1 text-right bg-zinc-700 lg:rounded-r-lg p-2 ">
+        <ul className="flex lg:flex-col gap-2">
           <li
-            className="p-3 rounded-lg cursor-pointer hover:bg-opacity-80 bg-zinc-600  font-extrabold text-sm lg:text-xl "
+            className="p-3 rounded-lg cursor-pointer hover:bg-zinc-800 bg-zinc-600  font-extrabold text-sm lg:text-xl "
             onClick={() => {
               setSumary("");
               setShowAchievements(false);
@@ -78,7 +78,7 @@ const page = () => {
           </li>
           {achievementsCategory.map((category, index) => (
             <li
-              className="p-3 rounded-lg cursor-pointer bg-stone-700 hover:bg-opacity-80 flex items-center justify-around  font-bold"
+              className="p-3 rounded-lg cursor-pointer bg-zinc-700 hover:bg-zinc-800 flex items-center justify-around  font-bold"
               key={index}
               onClick={() => {
                 setSumary(category.name);

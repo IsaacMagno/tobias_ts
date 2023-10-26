@@ -12,9 +12,9 @@ const achievementList = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-2 overflow-y-scroll  max-h-[45rem] pt-40 p-4 rounded-lg">
-      {achievements.map((achievement) => (
-        <AchievementDiv {...achievement} />
+    <div className="flex flex-col gap-2 overflow-y-scroll  max-h-[50rem] pt-40 p-4 rounded-lg">
+      {achievements.map((achievement, index) => (
+        <AchievementDiv {...achievement} key={index} />
       ))}
     </div>
   );

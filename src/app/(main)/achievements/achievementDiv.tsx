@@ -12,7 +12,7 @@ function AchievementDiv(achievement: Achievement) {
 
   return (
     <div
-      className="grid grid-cols-4 bg-zinc-600 p-2 rounded-lg gap-3"
+      className="grid grid-cols-4 bg-zinc-600 p-2 rounded-lg gap-3 cursor-pointer"
       onClick={() => setShowMore(!showMore)}
     >
       <div className="flex flex-col items-center">

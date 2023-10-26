@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 import UserBiography from "./components/UserBiography";
 import UserStats from "./components/UserStats";
 import Calendar from "./components/Calendar";
-
 export default function Home() {
   const [bgColor, setBgColor] = useState("bg-green-500");
   const [renderCalendar, setRenderCalendar] = useState(false);
@@ -42,6 +41,7 @@ export default function Home() {
           <Calendar show={renderCalendar} />
         </div>
       </div>
+
       <UserStats />
     </div>
   );

@@ -1,9 +1,9 @@
 import React from "react";
 
-import UserStats from "(main)/components/UserStats";
-import UserBiography from "(main)/components/UserBiography";
-import UserStatistics from "(main)/components/UserStatistics";
-import UserAchievements from "(main)/components/UserAchievements";
+import UserStats from "../../components/UserStats";
+import UserBiography from "../../components/UserBiography";
+import UserStatistics from "../../components/UserStatistics";
+import UserAchievements from "../../components/UserAchievements";
 
 const ChampionPage = () => {
   return (

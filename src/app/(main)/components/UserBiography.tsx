@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import MonkeyImage from "/public/tobs.webp";
-import MiniStatistics from "./MiniStatistics";
+import MiniStatistics from "./LayoutComponents/MiniStatistics";
 
 interface UserBiographyProps {
   displayBio: boolean;

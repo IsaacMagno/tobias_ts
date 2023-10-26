@@ -3,9 +3,9 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 import GoalsIcon from "/public/goalsIcons/goals.svg";
-import MiniStatistics from "../components/MiniStatistics";
-import ActualGoalsScrollBar from "../components/ActualGoalsScrollBar";
-import Dropdown from "(main)/components/Dropdown";
+import MiniStatistics from "../components/LayoutComponents/MiniStatistics";
+import ActualGoalsScrollBar from "./ActualGoalsScrollBar";
+import Dropdown from "../components/Dropdown";
 
 const page = () => {
   const [goalTime, setGoalTime] = useState("Anual");
